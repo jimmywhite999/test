@@ -1,4 +1,3 @@
-
 import requests
 import json
 import os
@@ -8,11 +7,11 @@ import memory
 import asyncio
 
 # OpenAI secret Key
-API_KEY = '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'
+API_KEY = ''
 # Models: text-davinci-003,text-curie-001,text-babbage-001,text-ada-001
 MODEL = 'gpt-3.5-turbo'
 # Telegram secret access bot token
-BOT_TOKEN = '6001570228:AAGBG5QccdKN0BGa5rB2YZYQCNx3pqW_PUU'
+BOT_TOKEN = ''
 # Specify all group ID the bot can respond too
 ALLOWED_GROUP_ID = ['-1610685632']
 # Specify your Chat Bot handle
@@ -168,7 +167,7 @@ async def ChatGPTbot():
                             
                         try:
                             if write_history!='':
-                                prompt=write_history+"\n\nQ : "+prompt+"\n\n
+                                prompt=write_history+"\n\nQ : "+prompt+"\n\n"
 
                             bot_response = await openAI(prompt, 200, bot_personality)
                             # Sending back response to telegram group
@@ -182,3 +181,5 @@ async def ChatGPTbot():
                         f.close()
     except Exception as e: 
         print(e)
+        
+await ChatGPTbot()
