@@ -25,7 +25,7 @@ if (mysqli_num_rows($result) > 0) {
     header("Location: dashboard.html");
     exit();
 } else {
-    header("Location: login.html");
+    header("Location: index.html");
     exit();
 }
 ?>
